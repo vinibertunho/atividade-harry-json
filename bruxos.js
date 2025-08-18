@@ -1,0 +1,55 @@
+const bruxos = [
+  // A partir daqui, adicione os 5 novos bruxos da tabela
+  {
+    id: 6,
+    nome: "Neville Longbottom",
+    casa: "Grifinória",
+    ano: 7,
+    varinha: "Cerejeira e pelo de unicórnio, 30cm",
+    mascote: "Sapo (Trevor)",
+    patrono: "Não conhecido",
+    especialidade: "Herbologia avançada",
+  },
+  {
+    id: 7,
+    nome: "Cho Chang",
+    casa: "Corvinal",
+    ano: 7,
+    varinha: "Salgueiro e fibra de coração de dragão, 23cm",
+    mascote: "Coruja (não nomeada)",
+    patrono: "Cisne",
+    especialidade: "Quadribol (Apanhadora)",
+  },
+  {
+    id: 8,
+    nome: "Cedrico Diggory",
+    casa: "Lufa-Lufa",
+    ano: 7,
+    varinha: "Freixo e pelo de unicórnio, 32cm",
+    mascote: "Nenhum",
+    patrono: "Não conhecido",
+    especialidade: "Cavalheirismo",
+  },
+  {
+    id: 9,
+    nome: "Bellatrix Lestrange",
+    casa: "Sonserina",
+    ano: 6,
+    varinha: "Nogueira e fibra de coração de dragão, 32cm",
+    mascote: "Nenhum",
+    patrono: "Não conhecido",
+    especialidade: "Artes das Trevas",
+  },
+  {
+    id: 10,
+    nome: "Minerva McGonagall",
+    casa: "Grifinória",
+    ano: 9,
+    varinha: "Abeto e fibra de coração de dragão, 24cm",
+    mascote: "Gato",
+    patrono: "Gato",
+    especialidade: "Transfiguração",
+  },
+];
+
+export default bruxos;
