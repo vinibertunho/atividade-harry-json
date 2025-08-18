@@ -15,7 +15,6 @@ app.use(express.json());
 
 // Define uma rota GET para a URL inicial ("/")
 app.get("/", (req, res) => {
-  // Envia uma resposta HTML simples de boas-vindas
   res.send("<h1>Bem-vindo ao Mundo de Harry Potter!</h1>");
 });
 // Nota: A rota de baixo para `/bruxos` é mais completa. Esta aqui será sobrescrita.
@@ -51,16 +50,28 @@ app.get("/bruxos/:id", (req, res) => {
     // Se não encontrou, retorna um status de erro 404 (Não Encontrado)
     res.status(404).json({
       success: false,
-      error: "Bruxo não encontrado 😕",
+      error: "Não existe esse bruxo! 😢",
       message: `Nenhum bruxo com ID ${id} foi encontrado`,
       codigo: "WIZARD_NOT_FOUND",
     });
   }
 });
 
+app.get("/bruxos/nome/:nome", (req, res) => {
+  let nome = req.params.nome;
+  const bruxosNome = bruxos.find((b) => b.nome === nome);
+
+  if (bruxosNome) {
+    res.status(200).json(bruxosNome);
+  } else {
+    res.status(404).json({
+      mensagem: "Esse bruxo nao existe 😢",
+    });
+  }
+});
+
 // para um mesmo caminho e verbo HTTP será usada.
 app.get("/bruxos", (req, res) => {
-  // Retorna a lista de bruxos com informações adicionais, como 'total'
   res.json({
     success: true,
     message: "Todos os bruxos de Hogwarts! 🏰",
@@ -69,9 +80,6 @@ app.get("/bruxos", (req, res) => {
   });
 });
 
-// Este bloco de código é uma duplicação. O servidor já foi inicializado
-// no primeiro `app.listen`. Na prática, o programa só rodará o primeiro
-// bloco de código `app.listen`. Este bloco é redundante e pode causar confusão.
 app.listen(3000, () => {
   console.log("🧙‍♂️ API dos Bruxos rodando na porta 3000!");
 });
