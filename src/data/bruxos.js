@@ -52,7 +52,7 @@ const bruxos = [
 },
   {
     id: 6,
-    nome: "Neville Longbottom",
+    nome: "Nevillle Longbottom",
     casa: "Grifinória",
     ano: 7,
     varinha: "Cerejeira e pelo de unicórnio, 30cm",
