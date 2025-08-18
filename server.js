@@ -1,5 +1,5 @@
 import express from "express";
-import bruxos from "./bruxos.js";
+import bruxos from "./src/data/bruxos.js";
 
 const app = express();
 const PORT = 3000;
@@ -16,5 +16,5 @@ app.get("/bruxos", (req, res) => {
 
 
 app.listen(PORT, () => {
-  console.log(`🧙‍♂️ API dos Bruxos está no ar na porta  http://localhost:${PORT}`);
+  console.log(`🧙‍♂️ API dos Bruxos está no ar na porta  https://localhost:${PORT}`);
 });
