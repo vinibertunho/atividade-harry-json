@@ -2,7 +2,7 @@
 import express from "express";
 
 // Importa os dados dos bruxos de um arquivo local
-import bruxos from "./src/data/bruxos.js";
+import bruxos from "./src/data/bruxos";
 
 // Cria uma instância do aplicativo Express
 const app = express();
@@ -80,6 +80,20 @@ app.get("/bruxos", (req, res) => {
   });
 });
 
+// NOVA ROTA: buscar bruxos por casa
+app.get("/bruxos/casa/:casa", (req, res) => {
+  let casa = req.params.casa;
+  const bruxosCasa = bruxos.filter((b) => b.casa === casa);
+
+  if (bruxosCasa.length > 0) {
+    res.status(200).json(bruxosCasa);
+  } else {
+    res.status(404).json({
+      mensagem: "Nenhum bruxo se encontra nessa casa. 😢",
+    });
+  }
+});
+
 app.listen(3000, () => {
-  console.log("🧙‍♂️ API dos Bruxos rodando na porta 3000!");
+  console.log(`🧙‍♂️ API dos Bruxos rodando na porta https://localhost:${PORT}`);
 });
