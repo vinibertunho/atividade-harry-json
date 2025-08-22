@@ -89,6 +89,7 @@ app.get("/bruxos/casa/:casa", (req, res) => {
   } else {
     res.status(404).json({
       mensagem: "Nenhum bruxo se encontra nessa casa. 😢",
+      codigo: "WINZARD_NOT_FOUND"
     });
   }
 });
