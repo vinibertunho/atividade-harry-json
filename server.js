@@ -1,4 +1,4 @@
-// Importa o módulo 'express' para criar o servidor web
+""; // Importa o módulo 'express' para criar o servidor web
 import express from "express";
 
 // Importa os dados dos bruxos de um arquivo local
@@ -89,11 +89,11 @@ app.get("/bruxos/casa/:casa", (req, res) => {
   } else {
     res.status(404).json({
       mensagem: "Nenhum bruxo se encontra nessa casa. 😢",
-      codigo: "WINZARD_NOT_FOUND"
+      codigo: "WINZARD_NOT_FOUND",
     });
   }
 });
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log(`🧙‍♂️ API dos Bruxos rodando na porta https://localhost:${PORT}`);
 });
