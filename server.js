@@ -2,7 +2,7 @@
 import express from "express";
 
 // Importa os dados dos bruxos de um arquivo local
-import bruxos from "./src/data/bruxos";
+import bruxos from "./src/data/bruxos.js";
 
 // Cria uma instância do aplicativo Express
 const app = express();
@@ -52,7 +52,6 @@ app.get("/bruxos/:id", (req, res) => {
       success: false,
       error: "Não existe esse bruxo! 😢",
       message: `Nenhum bruxo com ID ${id} foi encontrado`,
-      codigo: "WIZARD_NOT_FOUND",
     });
   }
 });
