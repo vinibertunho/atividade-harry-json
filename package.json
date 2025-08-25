@@ -7,7 +7,7 @@
     "dev": "nodemon server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Vinicius",
   "license": "MIT",
   "description": "",
   "dependencies": {

@@ -9,8 +9,8 @@ const bruxos = [
     mascote: "Coruja (Edwiges)",
     patrono: "Cervo",
     especialidade: "Sobreviver a Voldemort 😎",
-},
-{
+  },
+  {
     id: 2,
     nome: "Hermione Granger",
     casa: "Grifinória",
@@ -19,8 +19,8 @@ const bruxos = [
     mascote: "Gato (Bichento)",
     patrono: "Lontra",
     especialidade: "Saber tudo de tudo",
-},
-{
+  },
+  {
     id: 3,
     nome: "Ron Weasley",
     casa: "Grifinória",
@@ -29,8 +29,8 @@ const bruxos = [
     mascote: "Rato (Perebas)",
     patrono: "Terrier Jack Russell",
     especialidade: "Xadrez Bruxo",
-},
-{
+  },
+  {
     id: 4,
     nome: "Draco Malfoy",
     casa: "Sonserina",
@@ -39,8 +39,8 @@ const bruxos = [
     mascote: "Coruja (não nomeada)",
     patrono: "Desconhecido",
     especialidade: "Ser irritante",
-},
-{
+  },
+  {
     id: 5,
     nome: "Luna Lovegood",
     casa: "Corvinal",
@@ -49,7 +49,7 @@ const bruxos = [
     mascote: "Nenhum",
     patrono: "Lebre",
     especialidade: "Ver criaturas imaginárias (ou não) 👻",
-},
+  },
   {
     id: 6,
     nome: "Neville Longbottom",
@@ -100,6 +100,7 @@ const bruxos = [
     patrono: "Gato",
     especialidade: "Transfiguração",
   },
+  
 ];
 
 export default bruxos;
